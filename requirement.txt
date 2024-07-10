@@ -1,0 +1,4 @@
+pandas==1.5.3
+praw==7.7.1
+jupyterlab
+nbclient
