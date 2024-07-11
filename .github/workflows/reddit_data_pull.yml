@@ -48,7 +48,7 @@ jobs:
 
           git add *
 
-          git commit -am "GH ACTION Headlines $(date)"
+          git commit -am "Updated reddit FC data on $(date)"
 
           git push origin main
 
