@@ -40,8 +40,7 @@ with st.sidebar:
     st.markdown('#')
     st.markdown('#')
     st.markdown('#')
-    st.markdown('#')
-    st.markdown('#')
+    
   
    
     with st.expander('About', expanded=True):
