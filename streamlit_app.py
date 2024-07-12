@@ -11,7 +11,7 @@ st.set_page_config(
     initial_sidebar_state="expanded")
 
 #read the data
-df = pd.read_csv('Data\\reddit_fc_data.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/the-soham/Reddit_Github_Actions_Pipeline/main/Data/reddit_fc_data.csv')
 df['date'] = pd.to_datetime(df.date)
 
 
@@ -64,7 +64,7 @@ with st.sidebar:
 
     else:
         selected_team_df = df[(df['name'].isin(list(select_team)) == True) & (df['date'] >= pd.to_datetime(start_date)) & (df['date'] <= pd.to_datetime(end_date))]
-        print(selected_team_df)
+        
         plt_df = selected_team_df.copy()
     if selected_team_df.empty:
         st.error(f'{select_team} does not have data for the above date-range')
@@ -90,7 +90,7 @@ with st.sidebar:
 #plot 1 line polts about post count
 def make_posts_plot(_df):
     grouped_df = _df.groupby(['name', 'date']).size().reset_index(name='count_of_posts')
-    print(grouped_df)
+    
 # Create a line chart using Plotly
     fig = px.line(grouped_df, x='date', y='count_of_posts', color='name', title='Number of Posts Over Time')
 
@@ -108,7 +108,7 @@ def make_posts_plot(_df):
 
 def make_upvote_ratio_plot(_df):
     grouped_df = _df.groupby(['name','date'])['upvote_ratio'].mean().reset_index(name='mean_upvote_ratio').round(2)
-    print(grouped_df)
+   
     # Create a line chart using Plotly
     fig = px.line(grouped_df, x='date', y='mean_upvote_ratio', color='name', title='Number of Average upvotes Over Time')
 
