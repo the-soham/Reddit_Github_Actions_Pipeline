@@ -127,7 +127,7 @@ def make_upvote_ratio_plot(_df):
 
 
 #### main panel
-col = st.columns((0.4,0.7), gap='small')
+col = st.columns((0.4,0.6), gap='small')
 
 with col[0]:
 
