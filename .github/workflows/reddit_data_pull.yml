@@ -35,6 +35,7 @@ jobs:
             USER_AGENT: ${{secrets.USER_AGENT}}
             CLIENT_ID:  ${{secrets.CLIENT_ID}}
             CLIENT_SECRET: ${{secrets.CLIENT_SECRET}}
+            WORKSPACE:  ${{ github.workspace }}
         run: jupyter execute Reddit_Data_Refresh_TestFile.ipynb
         shell: bash 
 
