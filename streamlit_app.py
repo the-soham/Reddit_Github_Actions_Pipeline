@@ -52,7 +52,14 @@ with st.sidebar:
     st.markdown('#')
     
   
-   
+    with st.expander('About', expanded=True):
+            st.write('''
+                - Data: [Reddit](https://www.reddit.com).
+                - :orange[**Usage**]: Select the date range and the soccer/football club of your interest.
+                - :orange[**Number of Posts plot**]: Number of posts on the chosen team's subreddit. Don't forget to check out the chatter on the match days.
+                - :orange[**Average upvotes ratio plot**]: Average upvote ratio on the chosen team's subreddit.
+                - :red[**Open to Work**]: If you like this project and if you are hiring or you know someone who's hiring, please get in touch with me @ [sohambhagwat2@gmail.com](sohambhagwat2@gmail.com)
+                ''')
     
             
 
@@ -88,14 +95,7 @@ with st.sidebar:
         selected_team_df.columns = ['name', 'distinct_authors', 'sum_upvotes', 'sum_comments']
 
 
-        with st.expander('About', expanded=True):
-            st.write('''
-                - Data: [Reddit](https://www.reddit.com).
-                - :orange[**Usage**]: Select the date range and the soccer/football club of your interest.
-                - :orange[**Number of Posts plot**]: Number of posts on the chosen team's subreddit. Don't forget to check out the chatter on the match days.
-                - :orange[**Average upvotes ratio plot**]: Average upvote ratio on the chosen team's subreddit.
-                - :red[**Open to Work**]: If you like this project and if you are hiring or you know someone who's hiring, please get in touch with me @ [sohambhagwat2@gmail.com](sohambhagwat2@gmail.com)
-                ''')
+        
 
 #Plot functions
 #plot 1 line polts about post count
