@@ -3,12 +3,19 @@ import pandas as pd
 import altair as alt
 import plotly.express as px
 
+
+
+
 #############Sidebar
 st.set_page_config(
     page_title="Trending FCs",
     page_icon=":soccer:",
     layout="wide",
     initial_sidebar_state="expanded")
+
+st.title(':soccer: English Premier League: How are fans interacting on Reddit :soccer: ')
+st.markdown('#')
+
 
 #read the data
 df = pd.read_csv('https://raw.githubusercontent.com/the-soham/Reddit_Github_Actions_Pipeline/main/Data/reddit_fc_data.csv')
