@@ -108,7 +108,7 @@ def make_upvote_ratio_plot(_df):
     grouped_df = _df.groupby(['name','date'])['upvote_ratio'].mean().reset_index(name='mean_upvote_ratio').round(2)
    
     # Create a line chart using Plotly
-    fig = px.line(grouped_df, x='date', y='mean_upvote_ratio', color='name', title='Number of Average upvotes Over Time')
+    fig = px.line(grouped_df, x='date', y='mean_upvote_ratio', color='name', title='Upvotes ratio Over Time')
 
     # Customize layout
     fig.update_layout(
