@@ -18,7 +18,7 @@ st.markdown('#')
 
 
 #read the data
-df = pd.read_csv('https://raw.githubusercontent.com/the-soham/Reddit_Github_Actions_Pipeline/main/Data/reddit_fc_data_test.csv', on_bad_lines = 'skip')
+df = pd.read_csv('https://raw.githubusercontent.com/the-soham/Reddit_Github_Actions_Pipeline/main/Data/reddit_fc_data.csv', on_bad_lines = 'skip')
 df['date'] = pd.to_datetime(df.date, format='mixed')
 
 
