@@ -30,7 +30,7 @@ with st.sidebar:
 
     teams = list(df.name.unique())
 
-    range = st.date_input('Select date range', (min_date,max_date ),min_value= min_date, max_value= max_date)
+    range = st.date_input('Select date range', ('2024/01/01',max_date ),min_value= min_date, max_value= max_date)
 
 
     try:
