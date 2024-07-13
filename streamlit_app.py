@@ -14,7 +14,7 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded")
 
-st.title(':soccer: English Premier League: How are fans interacting on Reddit :soccer: ')
+st.title(':soccer: English Premier League: Fan Interactions on Reddit :soccer: ')
 st.markdown('#')
 
 
