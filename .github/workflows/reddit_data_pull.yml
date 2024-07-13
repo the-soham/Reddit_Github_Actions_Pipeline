@@ -36,7 +36,7 @@ jobs:
             CLIENT_ID:  ${{secrets.CLIENT_ID}}
             CLIENT_SECRET: ${{secrets.CLIENT_SECRET}}
             WORKSPACE:  ${{ github.workspace }}
-        run: jupyter execute Reddit_Data_Refresh_TestFile.ipynb
+        run: jupyter execute Reddit_Data_Refresh.ipynb
         shell: bash 
 
  # Add new files in folder, commit along with other modified files, push
